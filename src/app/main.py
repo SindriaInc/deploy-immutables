@@ -3,11 +3,16 @@
 import subprocess
 import helpers
 
+import pydevd_pycharm
+pydevd_pycharm.settrace('10.10.100.1', port=4200, stdoutToServer=True, stderrToServer=True)
+
 # Sample lightsail
 #aws lightsail create-instances-from-snapshot --instance-snapshot-name WordPress-1-1569866208 --instance-names WordPress-2 --availability-zone us-west-2a --bundle-id medium_2_0
 
 # Main
 def main():
+    print("Helo")
+    #sys.exit(0)
     data = helpers.app()
 
     for k,immutable in data['immutables'].items():
