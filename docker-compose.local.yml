@@ -6,6 +6,7 @@ services:
     image: "sindriainc/deploy-immutables:local"
     container_name: "${APP_NAME}"
     command: "tail -f /dev/null"
+    entrypoint: "tail -f /dev/null"
     environment:
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
