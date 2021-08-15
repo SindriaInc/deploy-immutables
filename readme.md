@@ -1,6 +1,6 @@
 # Deploy Immutables
 
-This IaC component permit multi-thread deployment of immutable resources.
+This IaC component permit single-thread (multi-thread soon) deployment of immutable resources.
 
 ## Setup Development Environment
 

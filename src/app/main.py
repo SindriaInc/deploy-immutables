@@ -11,13 +11,12 @@ pydevd_pycharm.settrace('10.10.100.1', port=4200, stdoutToServer=True, stderrToS
 
 # Main
 def main():
-    print("Helo")
-    #sys.exit(0)
     data = helpers.app()
 
+    # Process lightsail deployments
     for k,immutable in data['immutables'].items():
         if (immutable['type'] == "lightsail"):
-            subprocess.call(['aws', 'lightsail','create-instances-from-snapshot', '--instance-snapshot-name', immutable['refer'], '--instance-names', immutable['name'], '--availability-zone', 'eu-central-1a', '--bundle-id', 'medium_2_0'])
+            subprocess.call(['aws', 'lightsail','create-instances-from-snapshot', '--instance-snapshot-name', immutable['refer'], '--instance-names', immutable['name'], '--availability-zone', immutable['zone'], '--bundle-id', immutable['bundle']])
 
 # Execute
 if __name__ == '__main__':

@@ -1,6 +1,5 @@
 import sys
 import yaml
-import os
 import datetime
 
 # Global app config
