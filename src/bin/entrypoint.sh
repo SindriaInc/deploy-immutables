@@ -2,17 +2,25 @@
 
 set -e
 
+# Setting Colors
+BLUE='\033[0;34m'
+YELLOW='\033[0;33m'
+RED='\033[0;31m'
+NC='\033[0m' #No Color
+NOW=$(date "+%Y-%m-%d_%H-%M-%S")
+
+
 if [ "${IAC_MODE}" == "standalone" ]; then
 
   # Validation immutable name
   if [ "${IMMUTABLE_NAME}" == "" ]; then
-      echo "IMMUTABLE_NAME env must be provided"
+      echo -e "${YELLOW}IMMUTABLE_NAME env must be provided${NC}"
       exit 1
   fi
 
   # Validation immutable refer
   if [ "${IMMUTABLE_REFER}" == "" ]; then
-      echo "IMMUTABLE_REFER env must be provided"
+      echo -e "${YELLOW}IMMUTABLE_REFER env must be provided${NC}"
       exit 1
   fi
 
