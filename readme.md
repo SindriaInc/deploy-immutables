@@ -5,6 +5,8 @@ This IaC component permit single-thread (multi-thread soon) deployment of immuta
 This is atomic routine for any CI/CD such as gitlab-ci, bitbucket-pipelines etc.
 In any case is possible to use it manually with run.sh helper script.
 
+![standalone](docs/screenshots/standalone.jpg)
+
 ## Configuration
 
 List of required envs. This envs will be set on your pipeline variables or in your .env file for manual usage.
