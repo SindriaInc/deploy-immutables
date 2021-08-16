@@ -9,6 +9,11 @@ import helpers
 # Sample lightsail
 #aws lightsail create-instances-from-snapshot --instance-snapshot-name WordPress-1-1569866208 --instance-names WordPress-2 --availability-zone us-west-2a --bundle-id medium_2_0
 
+# Sample ec2
+#aws ec2 create-instances-from-snapshot --instance-snapshot-name WordPress-1-1569866208 --instance-names WordPress-2 --availability-zone us-west-2a --bundle-id medium_2_0
+
+
+
 # Main
 def main():
     data = helpers.app()
@@ -17,6 +22,11 @@ def main():
     for k,immutable in data['immutables'].items():
         if (immutable['type'] == "lightsail"):
             subprocess.call(['aws', 'lightsail','create-instances-from-snapshot', '--instance-snapshot-name', immutable['refer'], '--instance-names', immutable['name'], '--availability-zone', immutable['zone'], '--bundle-id', immutable['bundle']])
+
+    # Process ec2 deployments
+    for k,immutable in data['immutables'].items():
+        if (immutable['type'] == "ec2"):
+            subprocess.call(['aws', 'ec2', 'create-instances-from-snapshot', '--instance-snapshot-name', immutable['refer'], '--instance-names', immutable['name'], '--availability-zone', immutable['zone'], '--bundle-id', immutable['bundle']])
 
 # Execute
 if __name__ == '__main__':
