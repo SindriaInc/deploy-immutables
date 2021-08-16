@@ -63,4 +63,4 @@ RUN pip install -r requirements.txt && \
 COPY bin/entrypoint.sh /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/bin/bash", "entrypoint.sh"]
 
-#USER ${SINDRIA_USER}
+USER ${SINDRIA_USER}
