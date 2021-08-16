@@ -9,18 +9,24 @@ In any case is possible to use it manually with run.sh helper script.
 
 List of required envs. This envs will be set on your pipeline variables or in your .env file for manual usage.
 
-| Key      | Value           |
-| ------------- |:-------------:|
-| AWS_ACCESS_KEY_ID      | <access-key> |
-| AWS_SECRET_ACCESS_KEY      | <secret-key>      |
-| AWS_DEFAULT_REGION | eu-central-1      |
-| BACKUP_BUCKET_NAME | <bucket-name>      |
-| APP_NAME | <repo-slug>      |
-| DB_HOST | <db-host>      |
-| DB_PORT | <db-port>      |
-| DB_NAME | <db-schema>      |
-| DB_USERNAME | <db-username>      |
-| DB_PASSWORD | <db-password>      |
+| Key                       | Value                         |
+| --------------------------|:-----------------------------:|
+| AWS_ACCESS_KEY_ID         | <access-key>                  |
+| AWS_SECRET_ACCESS_KEY     | <secret-key>                  |
+| AWS_DEFAULT_REGION        | eu-central-1                  |
+| IAC_MODE                  | <mode>                        |
+| IAC_GIT_USERNAME          | <service-account-username>    |
+| IAC_GIT_PASSWORD          | <service-account-username>    |
+| IAC_GIT_PROVIDER          | <provider-fqdn>               |
+| IAC_GIT_NAMESPACE         | <repo-namespace>              |
+| IAC_INFRA_NAME            | <repo-slug>                   |
+| IAC_LIVE_CACHE            | <bucket-name>                 |
+| IAC_CURRENT_INFRA         | <bucket-name>                 |
+| IMMUTABLE_NAME            | <resource-name>               |
+| IMMUTABLE_REFER           | <blueprint-name>              |
+| IMMUTABLE_TYPE            | <resource-type>               |
+| IMMUTABLE_BUNDLE          | <resource-bundle>             |
+| IMMUTABLE_ZONE            | <cloud-provider-zone>         |
 
 
 ## Usage
