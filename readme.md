@@ -41,6 +41,12 @@ OR use the helper script:
 
 IMPORTANT: `Remeber to set all envs in your .env file before run.`
 
+### Tips and Tricks
+
+For standalone usage you can override deployments.yaml configuration with volume. Append this to command above:
+
+`-v ./config:/var/www/app/config`
+
 
 ## Setup Development Environment
 
