@@ -1,6 +1,6 @@
 # Deploy Immutables
 
-This IaC component permit single-thread (multi-thread soon) deployment of immutable resources.
+This IaC component permit parallel deployment of immutable resources.
 
 This is atomic routine for any CI/CD such as gitlab-ci, bitbucket-pipelines etc.
 In any case is possible to use it manually with run.sh helper script.
